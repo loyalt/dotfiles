@@ -1,0 +1,8 @@
+#  Useful git aliases
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.last 'log -1'
+
+#    https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+#      List most recent 10 branches
+git config --global alias.recent 'for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"'
