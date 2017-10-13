@@ -1,7 +1,13 @@
 #  Useful git aliases
 git config --global alias.st status
 git config --global alias.co checkout
+git config --global alias.cp cherry-pick
+
 git config --global alias.last 'log -1'
+
+git config --global alias.grab merge --no-commit --squash
+git config --global alias.clean-branch !git branch | grep -o ' [^ ].*$' | xargs -L 1 git branch -d
+git config --global alias.aliases config --get-regexp '^alias\.'
 
 #    https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
 #      List most recent 10 branches
